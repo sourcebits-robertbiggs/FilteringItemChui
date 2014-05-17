@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  	<meta name="apple-mobile-web-app-capable" content="yes">
-  	<meta name="mobile-web-app-capable" content="yes">
-  	<meta name="msapplication-tap-highlight" content="no">
-
-  	<script src="js/jquery-2.0.3.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+    <script src="js/jquery-2.0.3.min.js"></script>
     <script src="chui/chui-3.5.0.js"></script>
     <script src="storage.js"></script>
     <script src="app.js"></script>
-
     <link rel="stylesheet" href="chui/chui-ios-3.5.0.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
     <style type="text/css">
-    	.quicklinks { -webkit-padding-start: 0px; }
-		ul.quicklinks li { list-style: none;padding-right: 5px; float: left; }
+      .quicklinks { -webkit-padding-start: 0px; }
+      ul.quicklinks li { list-style: none; padding-right: 5px; float: left; }
     </style>
 </head>
 <body>
-	<nav class="current"></nav>
-	<article id="main" class="current"><section>
-		<ul class="list" id="btnItem"><li class="comp" data-goto="detail"><div>
-			<h3>All Items</h3><p>Click me for see all item or click the quicklinks below for seeing a spesific category directly..</p>
-			<div><ul class="quicklinks">
-				<li role="button" value="1"><i class="fa fa-lg fa-border fa-pagelines"></i></li>
-				<li role="button" value="2"><i class="fa fa-lg fa-border fa-book"></i></li>
-				<li role="button" value="3"><i class="fa fa-lg fa-border fa-cog"></i></li>
-				<li role="button" value="4"><i class="fa fa-lg fa-border fa-gavel"></i></li>
-				<li role="button" value="5"><i class="fa fa-lg fa-border fa-heart"></i></li>
-			</ul></div>
-		</div></li></ul>
-	</section></article>
+  <nav class="current">
+   <h1>Our Items</h1> 
+  </nav>
+  <article id="main" class="current">
+    <section>
+      <ul class="list" id="btnItem">
+        <li id='showAllItems' class='comp' data-goto='detail'>
+          <div>
+            <h3>All Available Items</h3>
+          </div>
+          <aside><span class="nav"></span></aside>
+        </li>
+        <li>
+          <h3>Categories</h3>
+          <p>Tap a quicklink below to see a specific category:</p>
+          <ul class="quicklinks">
+            <li role="button"><i class="fa fa-lg fa-border fa-pagelines"></i></li>
+            <li role="button"><i class="fa fa-lg fa-border fa-book"></i></li>
+            <li role="button"><i class="fa fa-lg fa-border fa-cog"></i></li>
+            <li role="button"><i class="fa fa-lg fa-border fa-gavel"></i></li>
+            <li role="button"><i class="fa fa-lg fa-border fa-heart"></i></li>
+          </ul>
+          <br>
+        </li>
+      </ul>
+    </section>
+  </article>
 
-	<nav class="next">
-		<a href="#" class="button back">Back</a>
-		<h1>Item List</h1>
-	</nav><article id="detail" class="next">
-		<section><ul id="itemDetail" class="list"></ul></section>
-	</article>
+  <nav class="next">
+    <a href="#" class="button back">Our Items</a>
+    <h1 id='categoryTitle'>Item List</h1>
+  </nav>
+  <article id="detail" class="next">
+    <section>
+      <ul id="itemDetail" class="list">
+        <li>Bozo</li>
+      </ul>
+    </section>
+  </article>
 </body>
 </html>
