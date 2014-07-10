@@ -30,8 +30,8 @@ $(function() {
 			// Loop over returned category items and render:
 			whichItems.forEach(function(item) {
 				$('#itemDetail').append(tmpItem(item));
-				$.UIGoToArticle('#detail');
 			});
+			$.UIGoToArticle('#detail');
 			// Update the detail article title:
 			$('#categoryTitle').text(whichCategory + 's');
 		};
